@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Parking System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            background-color: #4CAF50;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #45a049;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .parking-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .parking-slot {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .parking-slot.available {
+            background-color: #d4edda;
+        }
+        .parking-slot.unavailable {
+            background-color: #f8d7da;
+        }
+        .slot-info {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .slot-status {
+            font-weight: bold;
+        }
+        .booking-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .booking-button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .parking-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Smart Parking System</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#slots">Parking Slots</a>
+        <a href="#account">My Account</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <div class="container">
+        <div class="section-title">Available Parking Slots</div>
+        <div class="parking-grid">
+            <!-- Slot 1 -->
+            <div class="parking-slot available">
+                <div class="slot-info">
+                    <span>Slot #1</span>
+                    <span class="slot-status">Available</span>
+                </div>
+                <button class="booking-button">Book Now</button>
+            </div>
+
+            <!-- Slot 2 -->
+            <div class="parking-slot unavailable">
+                <div class="slot-info">
+                    <span>Slot #2</span>
+                    <span class="slot-status">Occupied</span>
+                </div>
+            </div>
+
+            <!-- Slot 3 -->
+            <div class="parking-slot available">
+                <div class="slot-info">
+                    <span>Slot #3</span>
+                    <span class="slot-status">Available</span>
+                </div>
+                <button class="booking-button">Book Now</button>
+            </div>
+
+            <!-- Slot 4 -->
+            <div class="parking-slot unavailable">
+                <div class="slot-info">
+                    <span>Slot #4</span>
+                    <span class="slot-status">Occupied</span>
+                </div>
+            </div>
+
+            <!-- Slot 5 -->
+            <div class="parking-slot available">
+                <div class="slot-info">
+                    <span>Slot #5</span>
+                    <span class="slot-status">Available</span>
+                </div>
+                <button class="booking-button">Book Now</button>
+            </div>
+
+            <!-- Slot 6 -->
+            <div class="parking-slot unavailable">
+                <div class="slot-info">
+                    <span>Slot #6</span>
+                    <span class="slot-status">Occupied</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Smart Parking System. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
